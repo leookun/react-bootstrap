@@ -1,4 +1,4 @@
-const App = () => {
+function App() {
   return (
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores deleniti,
