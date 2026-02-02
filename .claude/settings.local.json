@@ -8,7 +8,8 @@
       "Bash(yarn add -D @antfu/eslint-config)",
       "Bash(yarn lint)",
       "Bash(yarn add -D @eslint-react/eslint-plugin eslint-plugin-react-hooks eslint-plugin-react-refresh)",
-      "Bash(yarn lint:fix)"
+      "Bash(yarn lint:fix)",
+      "Bash(yarn add -D code-inspector-plugin vite-plugin-top-level-await @tailwindcss/vite unplugin-auto-import)"
     ]
   }
 }
