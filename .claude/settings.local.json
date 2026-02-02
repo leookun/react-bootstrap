@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx eslint .)",
+      "Bash(yarn add -D prettier eslint-config-prettier)",
+      "Bash(yarn format)",
+      "Bash(yarn remove eslint-config-sheriff eslint-config-prettier prettier)",
+      "Bash(yarn add -D @antfu/eslint-config)"
+    ]
+  }
+}
