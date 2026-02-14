@@ -14,18 +14,23 @@ const removeDebuggerPlugin = () => ({
   config(config: UserConfig, { command }: { command: 'build' | 'serve' }) {
     if (command === 'build') {
       config.build = config.build || {}
-      config.build.minify = 'terser'
-      config.build.terserOptions = {
-        compress: {
-          drop_debugger: true,
-          drop_console: false,
-        },
-      } as any
+      config.build.minify = 'esbuild'
+      config.esbuild = {
+        ...(config.esbuild || {}),
+        drop: ['debugger'],
+      }
     }
   },
 })
 
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
+    },
+  },
   plugins: [
     isDev && codeInspectorPlugin({
       bundler: 'vite',
